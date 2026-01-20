@@ -3,248 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyBrand – Execution at the Intersection</title>
+<title>MyBrand – Execution Systems</title>
+
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #0B0D17;
-    color: #F5F5F5;
-    scroll-behavior: smooth;
-  }
-  nav a { transition: all 0.3s; }
-  nav a:hover { color: #FFFFFF; transform: scale(1.05); }
-  .glass {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 18px;
-  }
-  .section:hover { transform: translateY(-6px); box-shadow:0 16px 36px rgba(255,255,255,0.18); }
-  .cta {
-    background: #FFFFFF;
-    color: #0B0D17;
-    font-weight: 700;
-    padding: 0.9rem 1.8rem;
-    border-radius: 10px;
-    animation: pulse 2s infinite;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 28px #FFFFFF;
-    animation: none;
-  }
-  @keyframes pulse { 0%,100%{transform:scale(1);}50%{transform:scale(1.06);} }
-  input, textarea {
-    background: rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-  }
-  input:focus, textarea:focus { outline: none; border-color: white; }
-  .shimmer {
-    background: linear-gradient(90deg, #FFFFFF 25%, #94A3B8 50%, #FFFFFF 75%);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 2.5s infinite linear;
-  }
-  @keyframes shimmer { 0% {background-position: -200% 0;} 100% {background-position: 200% 0;} }
-  #progressBar { position: fixed; top:0; left:0; height:4px; background:#FFFFFF; width:0%; z-index:60; transition: width 0.2s ease; }
-  .portfolio-card { position: relative; overflow: hidden; border-radius: 16px; cursor: pointer; }
-  .portfolio-card img { width:100%; height:250px; object-fit:cover; transition: transform 0.4s ease; }
-  .portfolio-card:hover img { transform: scale(1.08); }
-  .portfolio-card .overlay {
-    position: absolute; inset:0; background: rgba(11,13,23,0.7);
-    display:flex; justify-content:center; align-items:center;
-    opacity:0; transition: opacity 0.3s ease;
-  }
-  .portfolio-card:hover .overlay { opacity:1; }
-  .overlay button { padding:0.8rem 1.5rem; font-weight:700; border-radius:8px; }
-  .magnetic { display:inline-block; transition: transform 0.2s ease; }
-  .fade { opacity:0; transform: translateY(24px); transition: all 0.6s ease; }
-  .show { opacity:1; transform: translateY(0); }
+body{
+  font-family: Inter, sans-serif;
+  background:#0B0D17;
+  color:#F5F5F5;
+}
+.glass{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:18px;
+}
+.cta{
+  background:#E5E7EB;
+  color:#0B0D17;
+  font-weight:800;
+  padding:0.9rem 1.8rem;
+  border-radius:10px;
+}
+.cta:hover{
+  background:#FFFFFF;
+}
+.fade{
+  opacity:0;
+  transform:translateY(24px);
+  transition:all 0.6s ease;
+}
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+input,textarea{
+  background:rgba(0,0,0,0.4);
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
+}
+input:focus,textarea:focus{
+  outline:none;
+  border-color:white;
+}
 </style>
 </head>
+
 <body>
 
-<!-- Scroll Progress -->
-<div id="progressBar"></div>
-
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md px-6 py-4 flex justify-between items-center">
-  <div class="text-xl font-bold">MyBrand</div>
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md px-6 py-4 flex justify-between">
+  <div class="font-extrabold text-lg">MyBrand</div>
   <div class="space-x-6 text-sm">
     <a href="#home">Home</a>
     <a href="#work">Work</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#apply">Apply</a>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section id="home" class="pt-32 px-6 text-center relative">
-  <h1 class="text-6xl font-bold mb-6 shimmer fade">
-    Execution at the Intersection
+<section id="home" class="pt-32 px-6 text-center max-w-4xl mx-auto">
+  <h1 class="text-6xl font-extrabold mb-6 fade">
+    Build systems. Ship outcomes. Lead markets.
   </h1>
-  <p class="text-lg text-white/70 max-w-3xl mx-auto fade mb-6">
-    Ideas optional. Commitment required. Transform your chaos into live, high-authority systems.
+  <p class="text-lg text-white/75 mb-8 fade">
+    You turn unclear ideas into executed systems.  
+    Commitment decides entry.
   </p>
-  <button class="cta magnetic fade" onclick="openModal()">Apply for Strategic Access</button>
+  <button class="cta fade" onclick="openModal()">Apply for Strategic Access</button>
 </section>
 
-<!-- Portfolio / Case Studies -->
-<section id="work" class="pt-24 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
-  <div class="portfolio-card fade">
-    <img src="https://via.placeholder.com/600x400?text=Luxury+Render+1" alt="Digital Flagship Architecture">
-    <div class="overlay">
-      <button class="cta">Apply</button>
-    </div>
-    <div class="mt-4 text-white/70">
-      <h3 class="font-bold mb-1">Digital Flagship Architecture</h3>
-      <p class="text-sm">Turned scattered concepts into a market-ready flagship in 21 days using the Insider Methodology.</p>
-    </div>
-  </div>
-  <div class="portfolio-card fade">
-    <img src="https://via.placeholder.com/600x400?text=Luxury+Render+2" alt="Authority Signal System">
-    <div class="overlay">
-      <button class="cta">Apply</button>
-    </div>
-    <div class="mt-4 text-white/70">
-      <h3 class="font-bold mb-1">Authority Signal System</h3>
-      <p class="text-sm">Filtered noise into trust-building systems. 100% successful launch completion.</p>
-    </div>
-  </div>
-  <div class="portfolio-card fade">
-    <img src="https://via.placeholder.com/600x400?text=Luxury+Render+3" alt="Execution Control Protocol">
-    <div class="overlay">
-      <button class="cta">Apply</button>
-    </div>
-    <div class="mt-4 text-white/70">
-      <h3 class="font-bold mb-1">Execution Control Protocol</h3>
-      <p class="text-sm">Installed disciplined build system. Zero to live deployment without revisions.</p>
-    </div>
-  </div>
-  <div class="portfolio-card fade">
-    <img src="https://via.placeholder.com/600x400?text=Luxury+Render+4" alt="Clarity Revenue Engine">
-    <div class="overlay">
-      <button class="cta">Apply</button>
-    </div>
-    <div class="mt-4 text-white/70">
-      <h3 class="font-bold mb-1">Clarity Revenue Engine</h3>
-      <p class="text-sm">Aligned design, tech, mindset, marketing. 200% increase in qualified lead quality.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="pt-24 max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-  <div class="glass p-8 fade">
-    <h2 class="text-2xl font-semibold mb-4">Strategic Brand Architecture</h2>
-    <p class="text-white/70 mb-4">
-      Direction ends confusion. Define the idea worth executing and codify it into one system.
+<section id="work" class="pt-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+  <div class="glass p-6 fade">
+    <h3 class="font-bold text-xl mb-2">Digital Flagship Build</h3>
+    <p class="text-white/70 mb-3">
+      Live website shipped in 21 days.  
+      Zero revisions. Payment ready day one.
     </p>
-    <button class="cta magnetic" onclick="openModal()">Apply</button>
+  </div>
+  <div class="glass p-6 fade">
+    <h3 class="font-bold text-xl mb-2">Authority Positioning System</h3>
+    <p class="text-white/70 mb-3">
+      Repositioned digital presence.  
+      Lead quality doubled in 60 days.
+    </p>
+  </div>
+  <div class="glass p-6 fade">
+    <h3 class="font-bold text-xl mb-2">Execution Control Protocol</h3>
+    <p class="text-white/70 mb-3">
+      Installed decision structure.  
+      From stalled ideas to full deployment.
+    </p>
+  </div>
+  <div class="glass p-6 fade">
+    <h3 class="font-bold text-xl mb-2">Clarity Revenue Engine</h3>
+    <p class="text-white/70 mb-3">
+      Aligned design, messaging, and flow.  
+      Higher trust. Faster closes.
+    </p>
+  </div>
+</section>
+
+<section id="services" class="pt-28 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+  <div class="glass p-8 fade">
+    <h3 class="font-bold text-2xl mb-4">Strategic Architecture</h3>
+    <p class="text-white/70 mb-6">
+      Define outcomes. Build structure. Execute with precision.
+    </p>
+    <button class="cta" onclick="openModal()">Apply</button>
   </div>
   <div class="glass p-8 fade">
-    <h2 class="text-2xl font-semibold mb-4">High-Performance Ecosystems</h2>
-    <p class="text-white/70 mb-4">
-      Build digital platforms as disciplined execution systems. Integrate clarity, speed, and market flow.
+    <h3 class="font-bold text-2xl mb-4">Digital Positioning</h3>
+    <p class="text-white/70 mb-6">
+      Websites built for authority, trust, and clarity.
     </p>
-    <button class="cta magnetic" onclick="openModal()">Apply</button>
+    <button class="cta" onclick="openModal()">Apply</button>
   </div>
   <div class="glass p-8 fade">
-    <h2 class="text-2xl font-semibold mb-4">Executive Performance Coaching</h2>
-    <p class="text-white/70 mb-4">
-      Install execution discipline. Train decision control, focus, and momentum for action-takers.
+    <h3 class="font-bold text-2xl mb-4">Execution Coaching</h3>
+    <p class="text-white/70 mb-6">
+      Discipline, focus, and consistent output.
     </p>
-    <button class="cta magnetic" onclick="openModal()">Apply</button>
+    <button class="cta" onclick="openModal()">Apply</button>
   </div>
 </section>
 
-<!-- About / Philosophy -->
-<section id="about" class="pt-24 max-w-6xl mx-auto px-6 fade">
-  <div class="md:flex md:items-center md:gap-12">
-    <div class="md:w-1/2 mb-6 md:mb-0">
-      <img src="https://via.placeholder.com/400x500?text=Luxury+Portrait" alt="Portrait" class="rounded-lg shadow-lg">
-    </div>
-    <div class="md:w-1/2">
-      <h2 class="text-4xl font-bold mb-4">The Philosophy</h2>
-      <p class="text-white/70 mb-4">
-        Many collapse under excess ideas. Others stall from having none. I provide direction and enforce discipline.
-      </p>
-      <p class="text-white/70">
-        At the intersection of design, technology, mindset, and marketing, I build live systems that command trust.
-      </p>
-    </div>
-  </div>
+<section class="pt-28 px-6 max-w-5xl mx-auto fade">
+  <h2 class="text-4xl font-extrabold mb-8">Who This Is For</h2>
+  <p class="text-white/70 mb-2">You choose growth over comfort.</p>
+  <p class="text-white/70 mb-2">You value structure over motivation.</p>
+  <p class="text-white/70 mb-2">You think in years, not weeks.</p>
+  <p class="text-white/70">You finish what you start.</p>
 </section>
 
-<!-- Contact / Application -->
-<section id="contact" class="pt-24 max-w-4xl mx-auto px-6 fade text-center">
-  <h2 class="text-4xl font-bold mb-6">Apply for Strategic Access</h2>
-  <p class="mb-6 text-white/60">Ideas are optional. Commitment is required.</p>
-  <button class="cta magnetic" onclick="openModal()">Apply Now</button>
+<section class="pt-20 px-6 max-w-5xl mx-auto fade">
+  <h2 class="text-4xl font-extrabold mb-8">What We Work On</h2>
+  <p class="text-white/70 mb-2">Build design thinking and visual systems.</p>
+  <p class="text-white/70 mb-2">Position websites for authority and trust.</p>
+  <p class="text-white/70">Train mindset for consistency and output.</p>
 </section>
 
-<!-- Modal -->
-<div id="modal" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center z-50">
-  <div class="glass p-8 w-[90%] max-w-sm text-center relative">
-    <h3 class="text-2xl font-bold mb-4">Application</h3>
-    <form id="appForm" class="space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full p-3 rounded" required>
-      <input type="email" placeholder="Email" class="w-full p-3 rounded" required>
-      <input type="text" placeholder="Current Revenue / Goal" class="w-full p-3 rounded" required>
-      <textarea rows="3" placeholder="Project Scope / Brief" class="w-full p-3 rounded" required></textarea>
-      <button type="submit" class="cta w-full">Submit Application</button>
+<section class="pt-20 px-6 max-w-5xl mx-auto fade">
+  <h2 class="text-4xl font-extrabold mb-8">How It Works</h2>
+  <p class="text-white/70 mb-2">Define clear goals in private sessions.</p>
+  <p class="text-white/70 mb-2">Review real work with direct feedback.</p>
+  <p class="text-white/70">Apply systems immediately.</p>
+</section>
+
+<section id="about" class="pt-28 px-6 max-w-5xl mx-auto fade">
+  <h2 class="text-4xl font-extrabold mb-6">About Me</h2>
+  <p class="text-white/70 mb-4">
+    You work with builders under pressure.  
+    You turn unclear ideas into shipped systems.
+  </p>
+  <p class="text-white/70 mb-4">
+    You cut noise and enforce decisions.  
+    You value speed, discipline, and finish lines.
+  </p>
+  <p class="text-white/70">
+    You measure work by outcomes.  
+    You accept few clients and demand commitment.
+  </p>
+</section>
+
+<section id="apply" class="pt-28 px-6 max-w-4xl mx-auto text-center fade">
+  <h2 class="text-4xl font-extrabold mb-6">Apply for Strategic Access</h2>
+  <p class="text-white/70 mb-8">
+    If you act fast and finish strong, apply.
+  </p>
+  <button class="cta" onclick="openModal()">Apply Now</button>
+</section>
+
+<div id="modal" class="fixed inset-0 bg-black/85 hidden items-center justify-center">
+  <div class="glass p-8 w-[90%] max-w-sm">
+    <h3 class="text-2xl font-extrabold mb-4 text-center">Application</h3>
+    <form id="form" class="space-y-4">
+      <input class="w-full p-3 rounded" placeholder="Your name" required>
+      <input class="w-full p-3 rounded" placeholder="Email" required>
+      <input class="w-full p-3 rounded" placeholder="Revenue or goal" required>
+      <textarea class="w-full p-3 rounded" rows="3" placeholder="What you want to build" required></textarea>
+      <button class="cta w-full" type="submit">Submit</button>
     </form>
-    <p class="mt-4 text-sm text-white/60 cursor-pointer" onclick="closeModal()">Close</p>
+    <p class="text-center text-sm text-white/60 mt-4 cursor-pointer" onclick="closeModal()">Close</p>
   </div>
 </div>
 
 <script>
-  // IntersectionObserver for fade-ins
-  const observer = new IntersectionObserver(entries=>{
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("show"); });
-  }, {threshold:0.2});
-  document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+const observer=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")})
+},{threshold:0.2})
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el))
 
-  // Modal
-  function openModal() {
-    document.getElementById("modal").classList.remove("hidden");
-    document.getElementById("modal").classList.add("flex");
-  }
-  function closeModal() { document.getElementById("modal").classList.add("hidden"); }
+function openModal(){
+  document.getElementById("modal").classList.remove("hidden")
+  document.getElementById("modal").classList.add("flex")
+}
+function closeModal(){
+  document.getElementById("modal").classList.add("hidden")
+}
 
-  // Form submit
-  document.getElementById('appForm').addEventListener('submit', e => {
-    e.preventDefault();
-    e.target.innerHTML = '<p class="text-green-400 font-bold text-lg">Application Submitted ✔</p>';
-    setTimeout(closeModal, 2000);
-  });
-
-  // Scroll progress
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    document.getElementById('progressBar').style.width = scrolled + '%';
-  });
-
-  // Magnetic CTA
-  document.querySelectorAll('.magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width/2;
-      const y = e.clientY - rect.top - rect.height/2;
-      btn.style.transform = `translate(${x*0.05}px, ${y*0.05}px) scale(1.03)`;
-    });
-    btn.addEventListener('mouseleave', () => btn.style.transform = 'translate(0,0) scale(1)');
-  });
+document.getElementById("form").addEventListener("submit",e=>{
+  e.preventDefault()
+  e.target.innerHTML="<p class='text-center font-bold'>Application received</p>"
+  setTimeout(closeModal,2000)
+})
 </script>
+
 </body>
 </html>

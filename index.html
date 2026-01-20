@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyBrand – Execution Systems</title>
+<title>PRIME TYRONE – Vision That Commands Reality</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -13,7 +13,10 @@ body{
   font-family: Inter, sans-serif;
   background:#0B0D17;
   color:#F5F5F5;
+  scroll-behavior: smooth;
 }
+nav a { transition: all 0.3s; }
+nav a:hover { color:#FFFFFF; transform: scale(1.05); }
 .glass{
   background:rgba(255,255,255,0.05);
   backdrop-filter:blur(14px);
@@ -26,9 +29,12 @@ body{
   font-weight:800;
   padding:0.9rem 1.8rem;
   border-radius:10px;
+  cursor:pointer;
+  transition: transform 0.2s ease;
 }
 .cta:hover{
   background:#FFFFFF;
+  transform: scale(1.05);
 }
 .fade{
   opacity:0;
@@ -48,64 +54,71 @@ input:focus,textarea:focus{
   outline:none;
   border-color:white;
 }
+.section-title{
+  text-4xl font-extrabold mb-8 text-center;
+}
+.section-content{
+  max-width:5xl;
+  margin:auto;
+  margin-bottom:2rem;
+}
 </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md px-6 py-4 flex justify-between">
-  <div class="font-extrabold text-lg">MyBrand</div>
+  <div class="font-extrabold text-lg">PRIME TYRONE</div>
   <div class="space-x-6 text-sm">
     <a href="#home">Home</a>
     <a href="#work">Work</a>
     <a href="#services">Services</a>
-    <a href="#about">About</a>
+    <a href="#philosophy">Philosophy</a>
     <a href="#apply">Apply</a>
   </div>
 </nav>
 
+<!-- Hero Section -->
 <section id="home" class="pt-32 px-6 text-center max-w-4xl mx-auto">
   <h1 class="text-6xl font-extrabold mb-6 fade">
-    Build systems. Ship outcomes. Lead markets.
+    Vision That Commands Reality
   </h1>
   <p class="text-lg text-white/75 mb-8 fade">
-    You turn unclear ideas into executed systems.  
-    Commitment decides entry.
+    Turn unclear ideas into executed systems. Commitment decides entry.
   </p>
-  <button class="cta fade" onclick="openModal()">Apply for Strategic Access</button>
+  <button class="cta fade" onclick="openModal()">Apply for PRIME TYRONE Access</button>
 </section>
 
+<!-- Work / Portfolio Section -->
 <section id="work" class="pt-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
   <div class="glass p-6 fade">
     <h3 class="font-bold text-xl mb-2">Digital Flagship Build</h3>
     <p class="text-white/70 mb-3">
-      Live website shipped in 21 days.  
-      Zero revisions. Payment ready day one.
+      Live website shipped in 21 days. Zero revisions. Payment ready day one.
     </p>
   </div>
   <div class="glass p-6 fade">
     <h3 class="font-bold text-xl mb-2">Authority Positioning System</h3>
     <p class="text-white/70 mb-3">
-      Repositioned digital presence.  
-      Lead quality doubled in 60 days.
+      Repositioned digital presence. Lead quality doubled in 60 days.
     </p>
   </div>
   <div class="glass p-6 fade">
     <h3 class="font-bold text-xl mb-2">Execution Control Protocol</h3>
     <p class="text-white/70 mb-3">
-      Installed decision structure.  
-      From stalled ideas to full deployment.
+      Installed decision structure. From stalled ideas to full deployment.
     </p>
   </div>
   <div class="glass p-6 fade">
     <h3 class="font-bold text-xl mb-2">Clarity Revenue Engine</h3>
     <p class="text-white/70 mb-3">
-      Aligned design, messaging, and flow.  
-      Higher trust. Faster closes.
+      Aligned design, messaging, and flow. Higher trust. Faster closes.
     </p>
   </div>
 </section>
 
+<!-- Services Section -->
 <section id="services" class="pt-28 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
   <div class="glass p-8 fade">
     <h3 class="font-bold text-2xl mb-4">Strategic Architecture</h3>
@@ -130,85 +143,92 @@ input:focus,textarea:focus{
   </div>
 </section>
 
-<section class="pt-28 px-6 max-w-5xl mx-auto fade">
-  <h2 class="text-4xl font-extrabold mb-8">Who This Is For</h2>
-  <p class="text-white/70 mb-2">You choose growth over comfort.</p>
-  <p class="text-white/70 mb-2">You value structure over motivation.</p>
-  <p class="text-white/70 mb-2">You think in years, not weeks.</p>
-  <p class="text-white/70">You finish what you start.</p>
+<!-- Who This Is For -->
+<section id="philosophy" class="pt-28 px-6 fade">
+  <h2 class="section-title">Who This Is For</h2>
+  <div class="section-content text-white/70">
+    <p>Growth over comfort</p>
+    <p>Structure over motivation</p>
+    <p>Long-term thinking</p>
+  </div>
+
+  <h2 class="section-title">What We Work On</h2>
+  <div class="section-content text-white/70">
+    <p>Design thinking & visual systems</p>
+    <p>Website & digital positioning</p>
+    <p>Mindset for consistency & output</p>
+  </div>
+
+  <h2 class="section-title">How It Works</h2>
+  <div class="section-content text-white/70">
+    <p>Private sessions with clear goals</p>
+    <p>Direct feedback on real work</p>
+    <p>Systems applied immediately</p>
+  </div>
 </section>
 
-<section class="pt-20 px-6 max-w-5xl mx-auto fade">
-  <h2 class="text-4xl font-extrabold mb-8">What We Work On</h2>
-  <p class="text-white/70 mb-2">Build design thinking and visual systems.</p>
-  <p class="text-white/70 mb-2">Position websites for authority and trust.</p>
-  <p class="text-white/70">Train mindset for consistency and output.</p>
+<!-- Philosophy / About Me -->
+<section class="pt-20 px-6 max-w-6xl mx-auto fade">
+  <div class="md:flex md:items-center md:gap-12">
+    <div class="md:w-1/2 mb-6 md:mb-0">
+      <img src="https://via.placeholder.com/400x500?text=Luxury+Portrait" alt="Portrait" class="rounded-lg shadow-lg">
+    </div>
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-bold mb-4">The Philosophy</h2>
+      <p class="text-white/70 mb-4">
+        Many collapse under excess ideas. Others stall from having none. I provide direction and enforce discipline.
+      </p>
+      <p class="text-white/70">
+        At the intersection of design, technology, mindset, and marketing, I build live systems that command trust.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="pt-20 px-6 max-w-5xl mx-auto fade">
-  <h2 class="text-4xl font-extrabold mb-8">How It Works</h2>
-  <p class="text-white/70 mb-2">Define clear goals in private sessions.</p>
-  <p class="text-white/70 mb-2">Review real work with direct feedback.</p>
-  <p class="text-white/70">Apply systems immediately.</p>
-</section>
-
-<section id="about" class="pt-28 px-6 max-w-5xl mx-auto fade">
-  <h2 class="text-4xl font-extrabold mb-6">About Me</h2>
-  <p class="text-white/70 mb-4">
-    You work with builders under pressure.  
-    You turn unclear ideas into shipped systems.
-  </p>
-  <p class="text-white/70 mb-4">
-    You cut noise and enforce decisions.  
-    You value speed, discipline, and finish lines.
-  </p>
-  <p class="text-white/70">
-    You measure work by outcomes.  
-    You accept few clients and demand commitment.
-  </p>
-</section>
-
+<!-- Apply Section -->
 <section id="apply" class="pt-28 px-6 max-w-4xl mx-auto text-center fade">
-  <h2 class="text-4xl font-extrabold mb-6">Apply for Strategic Access</h2>
-  <p class="text-white/70 mb-8">
-    If you act fast and finish strong, apply.
-  </p>
+  <h2 class="text-4xl font-extrabold mb-6">Apply for PRIME TYRONE Access</h2>
+  <p class="text-white/70 mb-8">If you act fast and finish strong, apply.</p>
   <button class="cta" onclick="openModal()">Apply Now</button>
 </section>
 
-<div id="modal" class="fixed inset-0 bg-black/85 hidden items-center justify-center">
-  <div class="glass p-8 w-[90%] max-w-sm">
-    <h3 class="text-2xl font-extrabold mb-4 text-center">Application</h3>
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black/85 hidden items-center justify-center z-50">
+  <div class="glass p-8 w-[90%] max-w-sm text-center">
+    <h3 class="text-2xl font-extrabold mb-4">Application</h3>
     <form id="form" class="space-y-4">
-      <input class="w-full p-3 rounded" placeholder="Your name" required>
-      <input class="w-full p-3 rounded" placeholder="Email" required>
-      <input class="w-full p-3 rounded" placeholder="Revenue or goal" required>
-      <textarea class="w-full p-3 rounded" rows="3" placeholder="What you want to build" required></textarea>
-      <button class="cta w-full" type="submit">Submit</button>
+      <input type="text" placeholder="Your Name" class="w-full p-3 rounded" required>
+      <input type="email" placeholder="Email" class="w-full p-3 rounded" required>
+      <input type="text" placeholder="Revenue / Goal" class="w-full p-3 rounded" required>
+      <textarea rows="3" placeholder="Project Scope / Brief" class="w-full p-3 rounded" required></textarea>
+      <button type="submit" class="cta w-full">Submit Application</button>
     </form>
-    <p class="text-center text-sm text-white/60 mt-4 cursor-pointer" onclick="closeModal()">Close</p>
+    <p class="mt-4 text-sm text-white/60 cursor-pointer" onclick="closeModal()">Close</p>
   </div>
 </div>
 
 <script>
-const observer=new IntersectionObserver(e=>{
-  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")})
-},{threshold:0.2})
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el))
+// Fade in sections
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("show"); });
+}, {threshold:0.2});
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
 
+// Modal controls
 function openModal(){
-  document.getElementById("modal").classList.remove("hidden")
-  document.getElementById("modal").classList.add("flex")
+  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("modal").classList.add("flex");
 }
 function closeModal(){
-  document.getElementById("modal").classList.add("hidden")
+  document.getElementById("modal").classList.add("hidden");
 }
 
-document.getElementById("form").addEventListener("submit",e=>{
-  e.preventDefault()
-  e.target.innerHTML="<p class='text-center font-bold'>Application received</p>"
-  setTimeout(closeModal,2000)
-})
+// Form submit
+document.getElementById("form").addEventListener("submit", e=>{
+  e.preventDefault();
+  e.target.innerHTML="<p class='text-center font-bold text-green-400 text-lg'>Application Submitted ✔</p>";
+  setTimeout(closeModal,2000);
+});
 </script>
 
 </body>

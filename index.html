@@ -62,6 +62,19 @@ input:focus,textarea:focus{
   margin:auto;
   margin-bottom:2rem;
 }
+.portfolio-about{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:16px;
+  padding:2rem;
+  text-align:center;
+  margin-bottom:2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-about:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 36px rgba(255,255,255,0.18);
+}
 </style>
 </head>
 
@@ -90,8 +103,20 @@ input:focus,textarea:focus{
   <button class="cta fade" onclick="openModal()">Apply for PRIME TYRONE Access</button>
 </section>
 
+<!-- Portfolio About Me -->
+<section class="pt-28 px-6 fade">
+  <div class="portfolio-about fade">
+    <p>
+      I design at the intersection of graphic design, tech, digital marketing, and mindset. I help clients earn trust, execute with clarity, and grow income sustainably.
+    </p>
+    <p class="mt-4 font-semibold">
+      I only work with people who act. Commitment, clarity, and execution are rewarded.
+    </p>
+  </div>
+</section>
+
 <!-- Work / Portfolio Section -->
-<section id="work" class="pt-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+<section id="work" class="pt-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
   <div class="glass p-6 fade">
     <h3 class="font-bold text-xl mb-2">Digital Flagship Build</h3>
     <p class="text-white/70 mb-3">
@@ -143,7 +168,7 @@ input:focus,textarea:focus{
   </div>
 </section>
 
-<!-- Who This Is For -->
+<!-- Who This Is For / What We Work On / How It Works -->
 <section id="philosophy" class="pt-28 px-6 fade">
   <h2 class="section-title">Who This Is For</h2>
   <div class="section-content text-white/70">
